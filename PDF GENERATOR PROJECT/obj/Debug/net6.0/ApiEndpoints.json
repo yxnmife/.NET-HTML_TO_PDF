@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "PDF_GENERATOR_PROJECT.Controllers.StudentsController",
+    "Method": "PrintPDF",
+    "RelativePath": "api/Students/CONVERT HTML TO PDF",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PDF_GENERATOR_PROJECT.Controllers.StudentsController",
+    "Method": "GetallStudents",
+    "RelativePath": "api/Students/Get all students",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PDF_GENERATOR_PROJECT.Controllers.StudentsController",
+    "Method": "RegisterStudent",
+    "RelativePath": "api/Students/Register student",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "create",
+        "Type": "PDF_GENERATOR_PROJECT.DTOs.Students.CreateStudentsDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

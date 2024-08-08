@@ -1,0 +1,79 @@
+﻿@model List<PDF_GENERATOR_PROJECT.DTOs.Students.StudentDTO>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Creating HTML from database Data
+    </title>
+</head>
+<style>
+    h2 {
+        color: red;
+        font-family: Cooper;
+    }
+
+    .student-text {
+        color: blue;
+    }
+
+    .table {
+        width: 800px;
+        height: 400px;
+    }
+
+    .table-head th {
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        border: 1px solid black;
+        border-collapse: collapse;
+        justify-content: center;
+        height: 75px;
+        font-size: 30px;
+    }
+
+    .table-body td {
+        text-align: center;
+        border: 1px solid black;
+        color: darkred;
+        font-size: 20px
+    }
+
+    #print {
+        width: 120px;
+        height: 40px;
+    }
+</style>
+<body>
+    <h2>Below a table of <span class="student-text">students </span> fetched from the database</h2>
+    <br />
+    <table class="table">
+        <thead class="table-head">
+            <tr>
+                <th>S/N</th>
+                <th>Student Id</th>
+                <th>Fullname</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody class="table-body">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var student = Model[i];
+                <tr>
+                    <td>
+                        @(i + 1)
+                    </td>
+                    <td>@student.StudentId</td>
+                    <td>@student.FullName</td>
+                    <td>@student.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <form method="post">
+        <button type="submit" id="print">print</button>
+    </form>
+</body>
+</html>
+
